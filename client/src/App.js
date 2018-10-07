@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {PlayerDetailsField} from './FormComponents.js';
 
 class App extends Component {
   
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div class="music-quiz-header"><h1>Music Quiz</h1></div>
+      <div className="music-quiz-header"><h1>Music Quiz</h1></div>
         <Tabs>
           <TabList>
             <Tab>Quiz</Tab>
@@ -33,15 +33,14 @@ class App extends Component {
           </TabList>
 
           <TabPanel>
-            <form class="player-details">
-              <div class="player-details-field">
-                <label for="user-name" >Username: </label> 
-                <input type="text" id="user-name"/>
-              </div>
-              <div class="player-details-field">
-                <label for="e-mail" >E-mail (optional):  </label> 
-                <input type="text" id="e-mail"/>
-              </div>
+            <form className="player-details">
+              <PlayerDetailsField label="Username"/>
+              OR
+              <PlayerDetailsField label="E-mail (optional)" hasHelp={true} 
+                helpText="If you have a Gravatar account, 
+                we can use your email address to display your handle and avatar on the leaderboard. 
+                We will neither store your email address anywhere, nor use it for anything other than this purpose."/>
+                {/*MD5 hash can be stored in order to retrieve the gravatar info on subsequent occasions.*/}
             </form>
           </TabPanel>
           

@@ -63,15 +63,32 @@ ul {
   color: #eeeeee;
 }
 
+/*PLAYER DETAILS FIELD
+   TODO: 
+     Fix the display. It's supposed to all be inline, but labels and inputs are stacked for some reason.
+     Also fix the positioning when help icon is present, seems to be knocking things out of whack.
+*/
+
+
 .player-details-field {
   display: inline-block;
 }
 
+.player-details img {
+  display: inline-block;
+}
+
 .player-details input {
-  margin: 0px 5%;
+  margin: 0px 5% 0px 5%;
   text-align: center;
+  display: inline-block;
 }
 
 .player-details {
   padding: 1%;
+}
+
+.player-details label {
+  display: inline-block;
+  
 }
